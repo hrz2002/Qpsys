@@ -1,0 +1,79 @@
+body {
+	background:url(../images/top-bg.gif);
+	/* frame 只有竖的 滚动条   y 是横的  两个都没有overflow:hidden; */
+	overflow-x:hidden;
+}
+
+p {
+  line-height: 170px;
+}
+
+ul#menu, ul#menu ul {
+  list-style-type:none;
+  margin: 0;
+  padding: 1px;
+  width: 170px;
+}
+
+ul#menu b {
+  display: block;
+  text-decoration: none;
+}
+
+ul#menu a {
+  display: block;
+  text-decoration: none;
+}
+
+ul#menu li {
+  margin-top: 2px
+  border: solid 3px #ff6347;
+}
+
+ul#menu li b {
+  color: #008080; //标签主题字体颜色
+  padding: 5px;
+  height: 30px;
+  font-size:15pt
+}
+
+ul#menu li b:hover {
+  background: #c6d7f7; /*主目录鼠标选择背景色#CAFF70*/
+}
+/* 子标签定义*/
+ul#menu li ul li a {
+  background: #F0FFFF;
+  color: #000;
+  padding: 3px;
+  height: 20px;
+  font-size:10pt
+}
+
+ul#menu li ul li a:hover {
+  background: #FFD000;
+  border-left: 20px #000 solid;
+  padding-left: 15px;
+}
+
+.left_bottom li.bottom{
+	border-bottom:inset;
+	width:190px;
+	height:2px;
+	border: solid 1px #8AB134;
+}
+
+.button {
+    padding: 4px 10px 3px 25px;
+    border: solid 1px #c6d7f7;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 11px;
+    height: 16px;
+    text-decoration: none;
+    color: #a0522d;
+    -moz-border-radius-bottomleft: 5px;
+    -moz-border-radius-bottomright: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+}

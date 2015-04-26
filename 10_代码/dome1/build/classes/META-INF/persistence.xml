@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="1.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
+	<persistence-unit name="openjpa">
+	 	<provider>org.apache.openjpa.persistence.PersistenceProviderImpl</provider>
+	 	<mapping-file>META-INF/orm.xml</mapping-file>
+	 	<properties>
+			<property name="openjpa.Log" value="DefaultLevel=INFO, Runtime=INFO, Tool=INFO, Enhance=INFO, SQL=INFO"/>
+			<property name="openjpa.jdbc.Schemas" value="public"/>
+			<!--TRACE INFO
+				この指定をしておくとOpenJPAが必要に応じてスキーマを変更してくれる。 INFO
+				-->
+			<property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema(ForeignKeys=true,Sequences=false)"/>			
+			
+			<!--
+				PostgreSQLではFOREIGN KEY以外にDEFERREDが許されていない。
+				（そのくせ、なんとリファレンスではUNIQUE等にDEFERREDが書けることになっている！）
+				このためOpenJPAが生成するDDL SQL文がエラーになってしまうので、この記述が必要。 
+			 -->
+			<property name="openjpa.jdbc.DBDictionary" value="org.apache.openjpa.jdbc.sql.PostgresDictionary(SupportsDeferredConstraints=false)"/>
+			<!--
+			<property name="openjpa.jdbc.DBDictionary" value="postgres(SupportsDeferredConstraints=false)"/>
+			-->
+		</properties>
+	</persistence-unit>
+</persistence>

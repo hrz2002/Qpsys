@@ -1,0 +1,20 @@
+*					{ margin: 0; padding: 3; }
+body				{
+font-family: Georgia, serif; 
+background: url(../images/top-bg.gif);  
+  }
+
+.table1				{margin:auto;width: 450px; border: solid #add8e6; text-align: left;}
+
+.label				{ width: 115px; text-align: right; float: left; padding: 5px; font-size: 16px; }
+
+input				{ width: 220px;padding: 5px; font-size: 18px;
+					  color: #3a3a3a; font-family: Georgia, serif;}
+input[type=checkbox]{
+	width: 20px;display: inline-block; 
+	}
+					  
+.button				{ background: url(images/button-bg.png) repeat-x top center; border: 1px solid #999;
+					  -moz-border-radius: 5px; padding: 5px; color: black; font-weight: bold;
+					  -webkit-border-radius: 5px; font-size: 13px;  width: 70px; }
+.button:hover		{ background: #CAFF70; color: black; }

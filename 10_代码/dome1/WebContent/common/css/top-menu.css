@@ -1,0 +1,5 @@
+body {
+	background:url(../images/top-bg.gif);
+	/* frame 只有竖的 滚动条   y 是横的  两个都没有overflow:hidden; */
+	overflow:hidden;
+}

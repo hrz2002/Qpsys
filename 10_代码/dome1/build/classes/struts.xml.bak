@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <constant name="struts.objectFactory" value="spring" />
+    <constant name="struts.devMode" value="true" />
+
+    <package name="/" extends="struts-default">
+        <action name="login" method="login" class="LoginAction">
+            <result name="success" type="stream">
+             	<param name="contentType">text/plain</param>         
+                <param name="inputName">inputStream</param>  
+            </result>
+        </action>
+        <action name="checkLogin" method="checkLogin" class="CheckloginAction">
+            <result name="success">menu/main.jsp</result>
+        </action>
+                <!-- 产生随机验证码 --> 
+        <action name="randNum" class="utilAction" method="validNumGenerate">         
+           <result name="success" type="stream">         
+                <param name="contentType">image/jpeg</param>         
+                <param name="inputName">inputStream</param>         
+           </result>      
+        </action>   
+    </package>
+    
+      <package name="member" namespace="/member" extends="struts-default">
+      	<global-exception-mappings>
+            <exception-mapping exception="org.apache.openjpa.persistence.PersistenceException" result="PersistenceException"/>
+            <exception-mapping exception="org.apache.openjpa.persistence.ArgumentException" result="PersistenceException"/>
+        </global-exception-mappings>
+        <action name="del_detail" method="del_detail" class="memberAction">
+        	<result name="success">add.jsp</result>
+        </action>
+        <action name="ajax" method="ajax" class="memberAction">
+        	<result>add.jsp</result>
+        </action>
+        <action name="show" method="show" class="memberAction">
+            <result name="success">list.jsp</result>
+            <result name="PersistenceException" type="chain">PersistenceException</result>
+        </action>
+        <action name="detail" method="detail" class="memberAction">
+        	<result name="input">add.jsp</result>
+            <result name="success">index.jsp</result>
+        </action>
+        <action name="save" method="save" class="memberAction">
+        	<result name="input">add.jsp</result>
+        	<result name="login">index.jsp</result>
+            <result name="success" type="chain">show</result>
+        </action>
+        <action name="back" method="back" class="memberAction">
+        	<result name="login">index.jsp</result>
+            <result name="success" type="chain">show</result>
+        </action>
+         <action name="del" method="del" class="memberAction">
+        	<result name="error">list.jsp</result>
+            <result name="success" type="chain">show</result>
+        </action>
+        <action name="edit" method="edit" class="memberAction">
+        	<result name="success">add.jsp</result>
+        </action>
+        <action name="PersistenceException" method="PersistenceException" class="memberAction">
+            <result name="success">error.jsp</result>
+        </action>
+        <action name="download" method="download" class="memberAction">
+		  	<result name="success" type="stream">
+			  <param name="contentType">application/octet-stream</param>
+              <param name="inputName">inputStreamPDF</param>
+              <param name="contentDisposition">contentDisposition</param>
+              <param name="bufferSize">4096</param>
+			</result>
+		</action>
+    </package>
+
+</struts>

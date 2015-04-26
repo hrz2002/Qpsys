@@ -1,0 +1,511 @@
+/* スタイルシート */
+
+/******************************
+��f�B　初期化
+******************************/
+
+body {}
+table {}
+tr {}
+td {}
+a {}
+
+/******************************
+��f�Bbodhi boddd　ボディ
+******************************/
+body {
+	margin:0px;
+	padding:0px;
+	background:url(image/bg.gif);
+}
+body.menu {
+	background:null;
+	background-color:#E3ECF9;
+}
+
+/******************************
+　フォーム
+******************************/
+form {margin:0 0 0 0;}
+
+/******************************
+��f�B　イメージリンク
+******************************/
+a img {border:0px;}
+
+/******************************
+　文字スタイル
+******************************/
+
+.pTabName	{color:#FFFFFF; font-size:10pt;}
+.date		{color:#FFFFFF; font-size:12pt;}
+.disable	{color:#444444;}
+.copy		{font-size:9pt;}
+.light		{font-size:8pt;}
+.standard	{font-size:12pt;}
+.linkdummy	{cursor:hand; text-decoration:underline;}
+
+.black			{color:#000000;}
+.white			{color:#FFFFFF;}
+.red			{color:#CC0000;}
+.green			{color:#00AA00;}
+.blue			{color:#0000CC;}
+.orange			{color:#DD8800;}
+.yellow			{color:#D7C000;}
+.violet			{color:#9600D2;}
+.gray			{color:#666666;}
+.light_red		{color:#FF6666;}
+.light_green	{color:#10D010;}
+.light_blue		{color:#436FFF;}
+.light_orange	{color:#FDBA4E;}
+.light_yellow	{color:#F5E537;}
+.light_violet	{color:#D74EFF;}
+.light_gray		{color:#AAAAAA;}
+.deep_red		{color:#900000;}
+.deep_green		{color:#007800;}
+.deep_blue		{color:#001080;}
+.deep_orange	{color:#906000;}
+.deep_yellow	{color:#807700;}
+.deep_violet	{color:#4A0071;}
+.deep_gray		{color:#333333;}
+
+.left	{text-align:left}
+.center	{text-align:center}
+.right	{text-align:right}
+
+/******************************************************************************************
+　メニュー／ヘッダー
+******************************************************************************************/
+
+/******************************
+　ログイン情報テーブル
+******************************/
+table.login_info {
+	font-size:12pt;
+	color:#FFFFFF;
+	width:100%;
+	margin:0px;
+	padding:0px;
+	border:0px;
+	border-collapse:collapse;
+	background-color:#002F89;
+}
+table.login_info td {
+	padding:5px;
+}
+
+/******************************
+　「トップページへ」テーブル
+******************************/
+table.toToppage {
+	width:100%;
+	margin:0px;
+	padding:0px;
+	border:0px;
+	border-collapse:collapse;
+}
+table.toToppage tr.colored{
+	background-color:#2C69D7;
+}
+table.toToppage a{
+	font-size:12pt;
+	color:#FFFFFF;
+    text-decoration:underline;
+}
+
+
+/******************************
+　Pタブテーブル
+******************************/
+table.pTab {
+	width:165;
+	margin:0px;
+	padding:0px;
+	border:0px;
+	border-collapse:collapse;
+}
+
+table.pTab td.contentName {
+	font-size:10pt;
+	padding:4px;
+	color:#FFFFFF;
+    text-decoration:none;
+	background-color:#2C69D7;
+}
+
+/******************************
+　Pボタンテーブル
+******************************/
+table.pBtn {
+	width:165px;
+	font-size:10pt;
+	margin:0px;
+	padding:0px;
+	border:0;
+	background-color:#7CBBFB;
+}
+table.pBtn td{width:50%; margin:0px; padding:0px; height:18px;}
+table.pBtn td.on{color:#000000; border:1px ridge; text-decoration:none; background-color:#FFDD99;}
+table.pBtn a:link	{width:100%; margin:0px; padding:1px,0px,0px;  height:18px; color:#000000; border:1px ridge;  text-decoration:none; background-color:#FCF7E4;}
+table.pBtn a:visited{width:100%; margin:0px; padding:1px,0px,0px;  height:18px; color:#000000; border:1px ridge;  text-decoration:none; background-color:#FCF7E4;}
+table.pBtn a:hover	{width:100%; margin:0px; padding:1px,0px,0px;  height:18px; color:#000000; border:1px ridge;  text-decoration:none; background-color:#FFFFF4;}
+table.pBtn a:active	{width:100%; margin:0px; padding:1px,0px,0px;  height:18px; color:#0000FF; border:1px groove; text-decoration:none; background-color:#FFFFF4;}
+
+
+/******************************
+　Pメニューテーブル
+******************************/
+table.pMenuOutline {
+	width:165px;
+	border:2px #7CBBFB solid;
+}
+
+table.pMenu {
+	width:100%;
+	font-size:10pt;
+	background-color:#FFFFFF;
+	border-collapse:collapse;
+}
+table.pMenu td {
+	height:21px;
+}
+table.pMenu td.menuCategory {
+	width:100%;
+	font-size:10pt;
+	font-weight:bold;
+	color:#000000;
+	padding:8px,0px,2px,0px;
+	background-color:E3ECF9;
+}
+
+table.pMenu a:link		{width:100%; color:#000000; text-decoration:none;}
+table.pMenu a:visited	{width:100%; color:#000000; text-decoration:none;}
+
+table.pMenu span.unselected				{width:100%; color:#000000; cursor:hand;}
+table.pMenu span.unselected span.hover	{width:100%; color:#000000; cursor:hand; background-color:#E0E0FF; text-decoration:none;}
+table.pMenu span.selected				{width:100%; color:#000000; cursor:hand; background-color:#FFE7A7;}
+table.pMenu span.selected span.hover	{width:100%; color:#000000; cursor:hand; background-color:#FFDD99; text-decoration:none;}
+
+/******************************
+��　ページヘッダ／タイトルテーブル
+******************************/
+table.title {
+	width:100%;
+	margin:0px;
+	padding:4px;
+	border:0px;
+	border-collapse:collapse;
+}
+table.title td.title{
+	height:49px;
+	font-size:16pt;
+	font-weight:bold;
+	color:#FFFFFF;
+	background:url(image/title_base.gif);
+}
+td.shadow	{background:url(image/tt_shadow.gif);  height:6px;}
+td.shadow2	{background:url(image/tt2_shadow.gif); height:4px;}
+
+/******************************
+　Tタブテーブル
+******************************/
+table.tTab {
+	width:100%;
+	height:23px;
+	font-size:11pt;
+	margin:0px;
+	border:0px;
+	border-collapse:collapse;
+}
+table.tTab td.on_L	{padding:0px; width:6px; background:url(image/btn_tt_on_l.gif);}
+table.tTab td.on_C	{padding:0px;			 background:url(image/btn_tt_on_c.gif); color:#000000;	font-weight:bold; text-decoration:none;}
+table.tTab td.on_R	{padding:0px; width:6px; background:url(image/btn_tt_on_r.gif);}
+table.tTab td.off_L	{padding:0px; width:6px; background:url(image/btn_tt_off_l.gif); cursor:hand;}
+table.tTab td.off_C	{padding:0px;			 background:url(image/btn_tt_off_c.gif); cursor:hand; color:#FFFFFF; font-weight:normal; text-decoration:underline;}
+table.tTab td.off_R	{padding:0px; width:6px; background:url(image/btn_tt_off_r.gif); cursor:hand;}
+table.tTab td.leftSpace	{background:url(image/tt_base.gif); width:10px;}
+table.tTab td.rightSpace{background:url(image/tt_base.gif);}
+
+/* tTab2 */
+table.tTab2 {
+	width:100%;
+	font-size:11pt;
+    color:#000000;
+	margin:0px;
+	padding:0px;
+	height:24px;
+	border-collapse:collapse;
+	background:url(image/tt2_base.gif);
+}
+table.tTab2 td {
+	border-top:1px #7F7A65 solid;
+	border-left:1px #AAA595 solid;
+}
+table.tTab2 td.on	{background:url(image/tt2_base_on.gif);}
+table.tTab2 td.off	{cursor:hand;}
+
+/******************************
+　Tボタンテーブル
+******************************/
+table.tBtn {
+	width:100%;
+	font-size:11pt;
+    color:#000000;
+	margin:0px;
+	padding:0px;
+	border:0px;
+	height:32px;
+	border-collapse:collapse;
+}
+table.tBtn_base_nomal	{background:url(image/tb_base.gif);}
+table.tBtn_base_top		{background:url(image/tb_base_top.gif);}
+table.tBtn_base_middle	{background:url(image/tb_base_middle.gif);}
+table.tBtn_base_bottom	{background:url(image/tb_base_bottom.gif);}
+table.tBtn td.tb_L		{background:url(image/btn_tb_l.gif);		margin:0px;	padding:0px; width:8px;}
+table.tBtn td.tb_C		{background:url(image/btn_tb_c.gif);		margin:0px;	padding:0px;			 cursor:hand;}
+table.tBtn td.tb_R		{background:url(image/btn_tb_r.gif);		margin:0px;	padding:0px; width:8px;}
+table.tBtn td.tb_small	{background:url(image/btn_tb_small.gif);	margin:0px;	padding:0px; width:60px; cursor:hand;	font-size:10pt;}
+table.tBtn td.separater	{background:url(image/tb_base_separater.gif);margin:0px;padding:0px; width:16px; cursor:hand;}
+table.tBtn form			{margin:0px; padding:0px; font-size:10pt;}
+table.tBtn_information	{background:url(image/tb_base_information.gif);margin:0px; width:100%;	height:20px; font-size:10pt; color:#000000; border:0px; border-collapse:collapse;}
+table.tBtn_information td{padding:2px,3px,0px;}
+
+
+/******************************************************************************************
+　テーブル
+******************************************************************************************/
+
+/******************************
+　トップページレイアウト用テーブル
+******************************/
+table.toppageTable {
+	width:99%;
+	border:0px;
+}
+table.toppageTable td.toppageCell{
+	padding:4px;
+}
+
+/******************************
+　リストテーブル
+******************************/
+/* 外枠 */
+table.outline {
+	margin:0px;
+	padding:0px;
+	border:0px;
+	border-collapse:collapse;
+}
+table.outline td {padding:0px;}
+table.outline td.outline_leftTop	{background:url(image/table_leftTop.gif);		width:4px;	height:4px;}
+table.outline td.outline_top		{background:url(image/table_top.gif);						height:4px;}
+table.outline td.outline_rightTop	{background:url(image/table_rightTop.gif);		width:10px;	height:4px;}
+table.outline td.outline_left		{background:url(image/table_left.gif);			width:4px;}
+table.outline td.outline_right		{background:url(image/table_right.gif);			width:10px;}
+table.outline td.outline_leftBottom	{background:url(image/table_leftBottom.gif);	width:4px;	height:10px;}
+table.outline td.outline_bottom		{background:url(image/table_bottom.gif);					height:10px;}
+table.outline td.outline_rightBottom{background:url(image/table_rightBottom.gif);	width:10px;	height:10px;}
+table.outline td.mainCell{padding:1,2,1,2;}
+
+/* リスト */
+table.listTable {
+	width:100%;
+	border-collapse:collapse;
+	background:url(image/table_base.gif);
+}
+table.listTable tr.headline    {height:38px; background:url(image/table_base_headline.gif);}
+table.listTable tr.headline td {color:#FFFFFF; font-size:15pt; font-weight:bold; vertical-align:middle;  border:0;}
+table.listTable tr.headline a  {color:#FFFFFF;}
+table.listTable tr.title	{background:url(image/table_base_title.gif); font-size:11pt; font-weight:bold;}
+table.listTable th.title	{background:url(image/table_base_title.gif); font-size:11pt;}
+table.listTable tr.colored	{background:url(image/table_base2.gif);}
+table.listTable tr.disable	{background:url(image/table_base_disable.gif);}
+table.listTable tr.red		{background:url(image/table_base_red.gif);}
+table.listTable tr.red2		{background:url(image/table_base_red2.gif);}
+table.listTable tr.red3		{background:url(image/table_base_red3.gif);}
+table.listTable tr.blue		{background:url(image/table_base_blue.gif);}
+
+table.listTable td		{font-size:11pt; color:#000000; padding:1px,1px,1px,3px; border:1px #C0C0C0 solid;}
+table.listTable td.head {font-size:11pt; color:#000000; padding:6px,7px,4px,7px; border-top:1px #FFFFFF solid; border-left:1px #FFFFFF solid; border-right:0; border-bottom:0; background-color:#C1D5F1;}
+table.listTable th.head {font-size:11pt; color:#000000; padding:6px,7px,4px,7px; border-top:1px #FFFFFF solid; border-left:1px #FFFFFF solid; border-right:0; border-bottom:0; background-color:#C1D5F1; font-weight:lighter;}
+table.listTable td.headNoPad {font-size:11pt; color:#000000; padding:6px,0px,4px; border-top:1px #FFFFFF solid; border-left:1px #FFFFFF solid; border-right:0; border-bottom:0; background-color:#C1D5F1;}
+table.listTable th.headNoPad {font-size:11pt; color:#000000; padding:6px,0px,4px; border-top:1px #FFFFFF solid; border-left:1px #FFFFFF solid; border-right:0; border-bottom:0; background-color:#C1D5F1; font-weight:lighter;}
+table.listTable td.alert	{background-color:#FF9999;}
+table.listTable td.select	{background-color:#CCDDFF;}
+table.listTable td.colored	{background:url(image/table_base2.gif);}
+table.listTable td.disable	{background:url(image/table_base_disable.gif);}
+table.listTable td.red		{background:url(image/table_base_red.gif);}
+table.listTable td.red2		{background:url(image/table_base_red2.gif);}
+table.listTable td.red3		{background:url(image/table_base_red3.gif);}
+table.listTable td.blue		{background:url(image/table_base_blue.gif);}
+table.listTable td.green	{background:url(image/table_base_green.gif);}
+table.listTable td.broadPad	{padding:10px,10px,8px,10px;}
+table.listTable td.noPad	{padding:0px;}
+
+table.listTable a.head:link		{font-size:11pt; color:#0000FF; text-decoration:underline;}
+table.listTable a.head:visited	{font-size:11pt; color:#0000FF; text-decoration:underline;}
+table.listTable a.head:hover	{font-size:11pt; color:#0000FF; text-decoration:underline;}
+table.listTable a.head:active	{font-size:11pt; color:#000000; text-decoration:underline;}
+
+table.listTable form {margin:0px; padding:0px;}
+
+/* マトリクステーブル */
+table.matrixTable {
+	width:100%;
+    color:#000000;
+	font-size:11pt;
+	border-collapse:collapse;
+}
+table.matrixTable td {
+	padding:1px,3px;
+	border:1px #CCCCCC solid;
+}
+
+/* スモールテーブル */
+table.smallTable {
+	width:100%;
+    color:#000000;
+	font-size:10pt;
+	border-collapse:collapse;
+	background:url(image/table_base.gif);
+}
+table.smallTable tr.colored {
+	background:url(image/table_base2.gif);
+}
+table.smallTable td {
+	padding:1px,1px,0px,1px;
+	border:1px #CCCCCC solid;
+}
+table.smallTable td.head {
+	padding:2px,1px,1px,1px;
+	border-top:1px #FFFFFF solid;
+	border-left:1px #FFFFFF solid;
+	border-right:0;
+	border-bottom:0;
+	background-color:#C1D5F1;
+}
+
+/* */
+table.noBorder {
+	border-collapse:collapse;
+}
+table.noBorder td{
+	border:0px;
+}
+
+/******************************
+　ボタンテーブル
+******************************/
+table.btnTable {border:0px;}
+table.btnTable  td	{padding:0px,15px;}
+table.btnTable form	{margin:0px; padding:0px;}
+
+/******************************
+　フェリカテーブル
+******************************/
+table.felicaTable_outer {border:4px #4D83E4 double;}
+table.felicaTable_outer td {padding:0px;}
+table.felicaTable_outer tr.title {font-size:11pt; color:#000000; background:url(image/table_base_title.gif);}
+
+table.felicaTable_inner {border:0px;}
+table.felicaTable_inner td {padding:0px,7px;}
+table.felicaTable_inner form {padding:0px; margin:0px;}
+
+
+/******************************
+　ヘルプ用テーブル
+******************************/
+table.helpTable {
+	font-size:11pt;
+	border:2px #F4E2A8 solid;
+	background:url(image/table_base2.gif);
+	border-collapse:collapse;
+}
+table.helpTable  td {
+	padding:5px;
+}
+table.helpTable  td.title {
+	font-weight:bold;
+	padding:2px;
+	background-color:#F4E2A8;
+}
+
+/******************************
+　警告用テーブル
+******************************/
+table.nothingAlertTable {
+	font-size:13pt;
+	font-weight:bold;
+	color:#009900;
+	border:2px #CCCCCC solid;
+	padding:5px;
+	margin:5px;
+}
+table.informationTable {
+	font-size:13pt;
+	font-weight:bold;
+	color:#009900;
+	border:2px #CCCCCC solid;
+	padding:5px;
+	margin:5px;
+}
+
+/******************************
+　アンダーラインテーブル
+******************************/
+table.underline {
+	font-size:11pt;
+}
+table.underline td {
+	padding-top:5px;
+	border-bottom:1px #C0C0C0 solid;
+}
+
+
+/******************************
+　カレンダー
+******************************/
+.calendar {font-size:14pt; margin:0px; padding:5px; text-decoration:none; background-color:#FFFFFF; border:2px ridge;}
+table.calendar {margin:0px; border-collapse:collapse; border:0px;}
+table.calendar td {font-size:15pt; padding:4px,5px; border:1px #BCC6D3 solid;}
+table.calendar td.day {font-size:13pt; background-color:#D2DBE8;}
+table.calendar td.sun {font-size:13pt; background-color:#FFCCCC;}
+table.calendar td.sat {font-size:13pt; background-color:#BBD9FF;}
+table.calendar td.selected {cursor:hand; background-color:#FFE7A7;}
+table.calendar td.selected_hover{cursor:hand; background-color:#FFDD99;}
+table.calendar td.unselected {background-color:#FFFFFF;}
+table.calendar td.unselected_hover{cursor:hand; background-color:#E9E9FF;}
+
+.calendarSmall {margin:0px; padding:0px; font-size:7pt; background-color:#FFFFFF; border:2px groove;}
+table.calendarSmall {width:100%; margin:0px; border:0px; padding:0px; border-collapse:collapse; background-color:#FFFFFF;}
+table.calendarSmall tr{height:5px;}
+table.calendarSmall td {
+    text-decoration: none;
+    margin:0px;
+    padding:0px;
+    border-top:0px;
+    border-left:0px;
+    border-bottom:1px #DDDDDD solid;
+    border-right:1px #DDDDDD solid;
+}
+table.calendarSmall td.day {background-color:#D2DBE8;}
+table.calendarSmall td.sun {background-color:#FFCCCC;}
+table.calendarSmall td.sat {background-color:#BBD9FF;}
+table.calendarSmall td.selected {background-color:#FFE7A7;}
+
+/******************************
+��　ページヘッダ／タイトルテーブル
+******************************/
+table.title2 {
+	width:100%;
+	margin:0px;
+	border:0px;
+	border-collapse:collapse;
+}
+table.title2 td.title2{
+	height:49px;
+	font-size:16pt;
+	font-weight:bold;
+	color:#FFFFFF;
+	background:url(image/title_error.gif);
+}
